@@ -1,0 +1,38 @@
+<div class="students-container">
+  <h2>Welcome, {{ userEmail() }}</h2>
+
+  <button (click)="openAddForm()">Add Student</button>
+  <button class="logout" (click)="logout()">Logout</button>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Class</th>
+        <th>Section</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let s of students()">
+        <td>{{ s.name }}</td>
+        <td>{{ s.class }}</td>
+        <td>{{ s.section }}</td>
+        <td>
+          <button (click)="openEditForm(s)">Edit</button>
+          <button (click)="deleteStudent(s.id)">Delete</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+  
+  <div *ngIf="showAddForm()" class="form">
+    <input placeholder="Name" [(ngModel)]="currentStudent().name" />
+    <input placeholder="Class" [(ngModel)]="currentStudent().class" />
+    <input placeholder="Section" [(ngModel)]="currentStudent().section" />
+
+    <button (click)="saveStudent()">Save</button>
+    <button (click)="closeForm()">Cancel</button>
+  </div>
+</div>
