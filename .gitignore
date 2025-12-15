@@ -1,0 +1,19 @@
+# .NET Web API
+WebAPI/bin/
+WebAPI/obj/
+WebAPI/*.user
+WebAPI/*.suo
+WebAPI/.vs/
+WebAPI/*.log
+WebAPI/.vscode/
+WebAPI/appsettings.*.json
+
+# Angular client
+StudentsManagementApi_AngularUI/student-management-app/node_modules/
+StudentsManagementApi_AngularUI/student-management-app/dist/
+StudentsManagementApi_AngularUI/student-management-app/.env
+StudentsManagementApi_AngularUI/student-management-app/.angular/
+
+# General
+.idea/
+*.DS_Store
